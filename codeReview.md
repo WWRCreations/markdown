@@ -1,6 +1,6 @@
 # Code Review
 
-## Dev Enviroment
+## Dev Environment
 
 The dev container task of running on port 9123 was successful, as was adding the integration for pod point. 
 
