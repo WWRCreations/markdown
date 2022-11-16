@@ -28,4 +28,6 @@ async def async_turn_on(self, **kwargs):  # pylint: disable=unused-argument
         await self.coordinator.async_request_refresh()
  ```
  
+ ## Exercise Feedback
+ 
  The three hours went by quickly, most of it was used setting up the dev and testing environments with a few obstacles along the way and reading the code to familiarize and follow the threads. I suspect if the testing environment had worked, then I would have had more specific examples of improvements to offer. It was an interesting project, and I learned some new things.
