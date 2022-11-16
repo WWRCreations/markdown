@@ -14,9 +14,9 @@ The following issues need to be addressed:
 
 ## Chosen Improvement 
 
-Given the objectives of the company having highest priority on reliability that cars are charged when they are needed, I decided to focus on the switch.py script. 
+Given the objectives of the company having highest priority on reliability that cars are charged when they are needed, I decided to focus on the switch.py and entity.py scripts. 
 
-In entity.py. With more time I would check the scheduling calculations, because they seem a little hairy to me. A concern is that the state is set to WAITING if the schedule calculations have any issues. I do not see code that fixes the issue if there is not a schedule for the day. Therefore in the case that scheduling fails, there could be an outcome where the device does not get charged by the needed endtime.
+In entity.py. With more time I would check the scheduling calculations, as scheduling tends to be a common place for error in edge cases. A concern is that the state of the pod is set to WAITING if the schedule calculations have any issues. I do not see code that fixes the issue if there is not a schedule for the day. Therefore in the case that scheduling fails, there could be an outcome where the device does not get charged by the needed endtime.
 
 The following code in switch.py waits for async_set_schedule to complete. While I am sure there is handling for exceptions within the PodPointClient code, I would look into also adding case handling for if the wait for API connection is beyond the time when charging needs to begin.
 ```
